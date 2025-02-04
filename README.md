@@ -71,6 +71,7 @@ Where:
 expected_win_rate = {bid_price: smoothed_win_rate for bid_price, smoothed_win_rate in df[['bid_price','smoothed_win_rate']].values}
 
 net_revenue = {bid_price: (0.5 - bid_price) * expected_win_rate[bid_price] for bid_price in df['bid_price'].values}
+```
 
 ### **Optimal Bid Price**
 - The optimal bid price is **$0.1**, yielding a maximum net revenue of **$0.12** per bid.
